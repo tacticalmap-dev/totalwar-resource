@@ -15,11 +15,6 @@ public class WarTownLookup {
             return Optional.empty();
         }
 
-        for (String townId : MapDivideStorage.getAllTownIds(server)) {
-            if (MapDivideStorage.getTownNodeNumbers(server, townId).contains(nodeNumber.get())) {
-                return Optional.of(townId);
-            }
-        }
-        return Optional.empty();
+        return MapDivideStorage.findTownContainingNode(server, nodeNumber.get());
     }
 }
