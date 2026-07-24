@@ -66,9 +66,9 @@ description='''${mod_description}'''
     ordering="NONE"
     side="BOTH"
 [[dependencies.${mod_id}]]
-    modId="wartown"
+    modId="modernwar"
     mandatory=true
-    versionRange="[1.0.2-alpha,)"
+    versionRange="[1.0.3-alpha,)"
     ordering="AFTER"
     side="BOTH"
 

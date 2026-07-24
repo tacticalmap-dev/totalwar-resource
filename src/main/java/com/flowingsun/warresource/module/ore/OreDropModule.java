@@ -4,12 +4,12 @@ import com.flowingsun.warresource.module.WarResourceModule;
 import com.flowingsun.warresource.module.ore.config.OreDropConfig;
 import com.flowingsun.warresource.module.ore.config.OreDropConfigLoader;
 import com.flowingsun.warresource.module.ore.drop.OreDropHandler;
-import com.flowingsun.warresource.module.ore.town.WarTownLookup;
+import com.flowingsun.warresource.module.ore.town.ModernWarMapLookup;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 public class OreDropModule implements WarResourceModule {
-    private final OreDropHandler dropHandler = new OreDropHandler(new WarTownLookup());
+    private final OreDropHandler dropHandler = new OreDropHandler(new ModernWarMapLookup());
 
     @Override
     public String id() {

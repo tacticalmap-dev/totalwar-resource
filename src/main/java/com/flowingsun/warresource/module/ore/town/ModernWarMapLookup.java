@@ -1,20 +1,20 @@
 package com.flowingsun.warresource.module.ore.town;
 
-import com.module.mapdivide.MapDivideStorage;
+import com.flowingsun.modernwar.api.map.MapDivideStateApi;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.ChunkPos;
 
 import java.util.Optional;
 
-public class WarTownLookup {
+public class ModernWarMapLookup {
     public Optional<String> findTownId(MinecraftServer server, BlockPos pos) {
         ChunkPos chunkPos = new ChunkPos(pos);
-        Optional<Integer> nodeNumber = MapDivideStorage.findNodeContainingChunk(server, chunkPos.x, chunkPos.z);
+        Optional<Integer> nodeNumber = MapDivideStateApi.findNodeContainingChunk(server, chunkPos.x, chunkPos.z);
         if (nodeNumber.isEmpty()) {
             return Optional.empty();
         }
 
-        return MapDivideStorage.findTownContainingNode(server, nodeNumber.get());
+        return MapDivideStateApi.findTownContainingNode(server, nodeNumber.get());
     }
 }

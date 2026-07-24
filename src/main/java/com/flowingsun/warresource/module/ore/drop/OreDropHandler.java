@@ -2,7 +2,7 @@ package com.flowingsun.warresource.module.ore.drop;
 
 import com.flowingsun.warresource.module.ore.config.OreDropConfig;
 import com.flowingsun.warresource.module.ore.config.OreDropRule;
-import com.flowingsun.warresource.module.ore.town.WarTownLookup;
+import com.flowingsun.warresource.module.ore.town.ModernWarMapLookup;
 import com.flowingsun.warresource.tag.WarResourceTags;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Player;
@@ -17,10 +17,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import java.util.List;
 
 public class OreDropHandler {
-    private final WarTownLookup townLookup;
+    private final ModernWarMapLookup townLookup;
     private volatile OreDropConfig config = OreDropConfig.empty();
 
-    public OreDropHandler(WarTownLookup townLookup) {
+    public OreDropHandler(ModernWarMapLookup townLookup) {
         this.townLookup = townLookup;
     }
 

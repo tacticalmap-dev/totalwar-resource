@@ -18,7 +18,7 @@ import java.util.List;
 
 @Mod(WarResource.MODID)
 public class WarResource {
-    public static final String MODID = "warresource";
+    public static final String MODID = "mwresource";
 
     private static final Logger LOGGER = LogUtils.getLogger();
     private final List<WarResourceModule> modules;
